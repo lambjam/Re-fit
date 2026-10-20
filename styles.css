@@ -13,6 +13,7 @@
 
 * { box-sizing: border-box; }
 html, body { width: 100%; min-height: 100%; margin: 0; }
+html { scroll-behavior: smooth; }
 body { font-family: "DM Sans", sans-serif; color: #405b43; background: var(--night); }
 button { font: inherit; }
 
@@ -66,8 +67,23 @@ button { font: inherit; }
 .laundry-basket-scene svg { display:block; width:100%; height:auto; overflow:visible; }
 .scene { position: absolute; z-index: 2; bottom: max(3vh, 12px); left: 50%; width: min(96vw, 1060px); transform: translateX(-50%); }
 .illustration { display: block; width: 100%; height: auto; overflow: visible; }
+.scroll-cue { position:absolute; z-index:6; left:50%; bottom:clamp(12px,2vh,22px); display:inline-flex; align-items:center; gap:8px; padding:10px 16px; border:1px solid rgba(255,255,255,.58); border-radius:999px; color:#fffdf7; background:rgba(16,19,18,.68); box-shadow:0 2px 8px rgba(35,27,20,.16); backdrop-filter:blur(3px); font-size:.82rem; letter-spacing:.04em; text-decoration:none; transform:translateX(-50%); transition:background .2s,transform .2s; }
+.scroll-cue:hover { background:rgba(16,19,18,.84); transform:translate(-50%,-2px); }
+.scroll-cue svg { width:16px; height:16px; fill:none; stroke:currentColor; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
+.scroll-cue:focus-visible { outline:3px solid #fffdf7; outline-offset:3px; }
+.more-section { min-height:75svh; display:grid; place-items:center; padding:clamp(48px,8vw,110px) 24px; background:linear-gradient(180deg,#f8f0df,#f2e6d0); text-align:center; }
+.more-content { width:min(680px,100%); }
+.more-eyebrow { margin:0 0 14px; color:#8c9b79; font-size:.78rem; font-weight:600; letter-spacing:.16em; text-transform:uppercase; }
+.more-content h2 { margin:0; color:#405b43; font:500 clamp(2rem,5vw,3.8rem)/1.12 "Playfair Display",Georgia,serif; }
+.more-content > p:last-child { max-width:480px; margin:20px auto 0; color:#6e7662; font-size:clamp(1rem,2vw,1.15rem); line-height:1.7; }
 .doggo { opacity: 0; transform-box: view-box; transform-origin: 50% 100%; }
 .story.playing .doggo { animation: doggoPop 1.2s cubic-bezier(.2,.85,.3,1) 3.75s both, doggoIdle 2.2s ease-in-out 4.95s infinite alternate; }
+.eye-blink { transform-box: fill-box; transform-origin: center; }
+.story.playing .eye-blink { animation: doggoBlink 4.4s ease-in-out 4.2s infinite; }
+@keyframes doggoBlink {
+  0%, 2% { transform: scaleY(.06); }
+  4%, 100% { transform: scaleY(1); }
+}
 @keyframes doggoPop {
   0% { opacity: 0; transform: translateY(175px) scale(.56) rotate(-8deg); }
   38% { opacity: 1; transform: translateY(-42px) scale(1.08) rotate(5deg); }
@@ -131,4 +147,5 @@ button { font: inherit; }
   .story.playing .doggo { opacity: 1; transform: none; }
   .story.playing .reveal { opacity: 1; transform: translate(-50%,0); }
   .story.playing .paws { opacity: 1; animation: none; }
+  .story.playing .eye-blink { animation: none; }
 }
