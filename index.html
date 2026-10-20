@@ -12,7 +12,6 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <svg class="clip-defs" aria-hidden="true" focusable="false"><defs><clipPath id="logoCloud" clipPathUnits="objectBoundingBox"><path d="M .13 .91 C .06 .91, .02 .85, .02 .77 C .02 .67, .08 .60, .16 .59 C .04 .55, .03 .43, .12 .36 C .02 .28, .04 .13, .16 .13 C .22 .02, .36 .03, .42 .15 C .50 .01, .68 .03, .72 .16 C .80 .05, .93 .11, .90 .30 C .96 .31, .98 .42, .95 .52 C .98 .63, .94 .76, .86 .79 C .94 .88, .92 .91, .88 .91 Z"/></clipPath></defs></svg>
   <main class="story" id="story">
     <div class="stars" id="stars" aria-hidden="true"></div>
     <div class="moon-glow" aria-hidden="true"></div>
@@ -28,20 +27,84 @@
     </header>
 
     <section class="reveal" id="brand" aria-label="Re-Fit brand reveal">
-      <img class="refit-logo" src="assets/refit-logo-cloud.png" alt="Meet Re-Fit logo with a leafy r and a hanger inside the e">
+      <img class="refit-logo" src="assets/refit-logo-crop.png" alt="Re-Fit logo with a leafy r and a hanger inside the e">
     </section>
 
     <div class="falling-hanger" id="hanger" aria-hidden="true">
       <svg viewBox="0 0 112 86">
-        <path d="M55 30c0-9 12-10 12-19 0-5-4-8-9-8-5 0-9 4-9 9" fill="none" stroke="#f3d27d" stroke-width="6" stroke-linecap="round"/>
-        <path d="M56 29 7 63c-3 2-2 7 2 7h94c4 0 5-5 2-7L56 29Z" fill="none" stroke="#e2b84d" stroke-width="4" stroke-linejoin="round"/>
-        <path d="M17 65h78" stroke="#f7d879" stroke-width="3" stroke-linecap="round"/>
+        <path d="M55 30c0-9 12-10 12-19 0-5-4-8-9-8-5 0-9 4-9 9" fill="none" stroke="#b8bec4" stroke-width="6" stroke-linecap="round"/>
+        <path d="M56 29 7 63c-3 2-2 7 2 7h94c4 0 5-5 2-7L56 29Z" fill="none" stroke="#aeb4b5" stroke-width="4" stroke-linejoin="round"/>
+        <path d="M17 65h78" stroke="#c4c9ce" stroke-width="3" stroke-linecap="round"/>
       </svg>
     </div>
 
     <div class="meadow" aria-hidden="true">
-      <div class="hill hill-back"></div><div class="hill hill-front"></div>
-      <div class="grass-sprigs sprig-one">&#10022;</div><div class="grass-sprigs sprig-two">&#10022;</div>
+      <svg class="floor-planks" viewBox="0 0 1000 300" preserveAspectRatio="none">
+        <rect width="1000" height="300" fill="#d9bd96"/>
+        <g fill="none" stroke="#635347" stroke-width="3" stroke-linecap="round" opacity=".46">
+          <path d="M0 0-200 300M50 0-130 300M100 0-60 300M150 0 10 300M200 0 80 300M250 0 150 300M300 0 220 300M350 0 290 300M400 0 360 300M450 0 430 300M500 0 500 300M550 0 570 300M600 0 640 300M650 0 710 300M700 0 780 300M750 0 850 300M800 0 920 300M850 0 990 300M900 0 1060 300M950 0 1130 300M1000 0 1200 300"/>
+        </g>
+      </svg>
+    </div>
+
+    <div class="wardrobe-scene" aria-hidden="true">
+      <svg viewBox="0 0 210 330" preserveAspectRatio="xMidYMax meet">
+        <g class="wardrobe">
+          <ellipse cx="105" cy="325" rx="98" ry="7" fill="#4f4032" opacity=".22"/>
+          <path d="M25 302h22v15a8 8 0 0 1-8 8h-6a8 8 0 0 1-8-8Z" fill="#8c775d"/>
+          <path d="M163 302h22v15a8 8 0 0 1-8 8h-6a8 8 0 0 1-8-8Z" fill="#8c775d"/>
+          <g transform="translate(0 20)">
+          <rect x="11" y="29" width="188" height="251" rx="16" fill="#9eaa8d"/>
+          <rect x="4" y="19" width="202" height="23" rx="11" fill="#b5c0a5"/>
+          <rect x="20" y="48" width="82" height="215" rx="11" fill="#dfe5d4"/>
+          <rect x="108" y="48" width="82" height="215" rx="11" fill="#dfe5d4"/>
+          <rect x="30" y="61" width="62" height="84" rx="8" fill="none" stroke="#c1cbb6" stroke-width="3"/>
+          <rect x="30" y="155" width="62" height="96" rx="8" fill="none" stroke="#c1cbb6" stroke-width="3"/>
+          <rect x="118" y="61" width="62" height="84" rx="8" fill="none" stroke="#c1cbb6" stroke-width="3"/>
+          <rect x="118" y="155" width="62" height="96" rx="8" fill="none" stroke="#c1cbb6" stroke-width="3"/>
+          <path d="M105 47v219" stroke="#9eaa8d" stroke-width="3"/>
+          <rect x="92" y="166" width="6" height="22" rx="3" fill="#806951"/>
+          <rect x="112" y="166" width="6" height="22" rx="3" fill="#806951"/>
+          <rect x="14" y="266" width="182" height="17" rx="7" fill="#8c9a7d"/>
+          </g>
+        </g>
+      </svg>
+    </div>
+
+    <div class="laundry-basket-scene" aria-hidden="true">
+      <svg viewBox="0 0 200 230" role="presentation">
+        <defs>
+          <pattern id="basket-weave" width="18" height="18" patternUnits="userSpaceOnUse">
+            <rect width="18" height="18" fill="#e8d8bd"/>
+            <path d="M0 5h18M0 14h18M5 0v18M14 0v18" fill="none" stroke="#d3bf9f" stroke-width="2" opacity=".58"/>
+          </pattern>
+          <pattern id="basket-cloth-knit" width="12" height="12" patternUnits="userSpaceOnUse">
+            <rect width="12" height="12" fill="#e8d8bd"/>
+            <path d="M3 0c4 2-4 5 0 12M9 0c-4 2 4 5 0 12" fill="none" stroke="#d3bf9f" stroke-width="1.3" opacity=".72"/>
+          </pattern>
+          <pattern id="basket-moss-leaves" width="18" height="16" patternUnits="userSpaceOnUse">
+            <rect width="18" height="16" fill="#718367"/>
+            <path d="M3 11c1-4 4-6 7-5-1 4-3 6-7 5Zm7-1c1-4 4-6 7-5-1 4-3 6-7 5Z" fill="#a7b393" opacity=".72"/>
+            <path d="M3 11q6-1 14-6" fill="none" stroke="#c2cbb0" stroke-width="1" stroke-linecap="round" opacity=".65"/>
+          </pattern>
+          <clipPath id="basket-body-clip"><path d="M24 82Q25 70 39 70h122q14 0 15 12l-13 119q-2 13-15 13H52q-13 0-15-13Z"/></clipPath>
+        </defs>
+        <ellipse cx="100" cy="224" rx="78" ry="6" fill="#4f4032" opacity=".18"/>
+        <g transform="translate(0 11)">
+        <path d="M24 82Q25 70 39 70h122q14 0 15 12l-13 119q-2 13-15 13H52q-13 0-15-13Z" fill="url(#basket-weave)"/>
+        <g clip-path="url(#basket-body-clip)" fill="none" stroke="#c8b391" stroke-width="3" opacity=".55">
+          <path d="M42 98h116M40 119h118M38 140h118M36 161h118M34 182h118M54 82l-9 122M79 78l-7 128M105 76l-4 132M131 76l2 132M155 78l8 125"/>
+        </g>
+        <ellipse cx="100" cy="82" rx="77" ry="14" fill="#f0e2c9"/>
+        <ellipse cx="100" cy="83" rx="63" ry="8" fill="#d8c6a8" opacity=".58"/>
+        <ellipse cx="100" cy="82" rx="77" ry="14" fill="none" stroke="#f1e4ce" stroke-width="7"/>
+        <path d="M24 82Q25 70 39 70h122q14 0 15 12" fill="none" stroke="#f1e4ce" stroke-width="7" stroke-linecap="round"/>
+        <path d="M46 83c-2-25 8-44 27-45 17-1 22 20 39 18 12-2 20-18 35-14 13 3 18 21 13 41-8 8-27 11-55 9-26-2-43-5-56-9Z" fill="url(#basket-moss-leaves)"/>
+        <path d="M52 79c1-19 15-31 31-28 16 3 22 16 39 14 12-2 21-12 33-7 8 3 12 12 11 21-10 8-29 11-56 9-26-2-45-4-59-9Z" fill="#bd858c"/>
+        <path d="M72 79c2-15 13-26 25-25 14 1 20 15 33 14 9-1 15-9 24-6 7 2 11 9 11 17-6 7-24 9-47 8-22-1-38-3-48-8Z" fill="url(#basket-cloth-knit)"/>
+        <path d="M24 82Q100 110 176 82" fill="none" stroke="#f1e4ce" stroke-width="7" stroke-linecap="round"/>
+        </g>
+      </svg>
     </div>
 
     <div class="scene" aria-label="Doggo pops out of a colorful pile of clothes">
@@ -50,8 +113,13 @@
         <desc id="scene-desc">A sweet taupe puppy with pink ears and a green sprout pops up from a pile of cream, sage, dusty rose, lavender, and striped clothes.</desc>
         <defs>
           <filter id="softShadow" x="-30%" y="-30%" width="160%" height="180%"><feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="#1a2c25" flood-opacity=".2"/></filter>
-          <pattern id="knit" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M4 1c7 4-7 10 0 14M12 1c-7 4 7 10 0 14" fill="none" stroke="#dfd2bf" stroke-width="2"/></pattern>
+          <pattern id="knit" width="16" height="16" patternUnits="userSpaceOnUse"><rect width="16" height="16" fill="#f1e7d6"/><path d="M4 1c7 4-7 10 0 14M12 1c-7 4 7 10 0 14" fill="none" stroke="#dfd2bf" stroke-width="2"/></pattern>
           <pattern id="stripes" width="20" height="20" patternUnits="userSpaceOnUse"><rect width="20" height="20" fill="#eee5d6"/><path d="M0 5h20M0 15h20" stroke="#81746b" stroke-width="4"/></pattern>
+          <pattern id="rose-dots" width="28" height="26" patternUnits="userSpaceOnUse"><circle cx="7" cy="7" r="2.4" fill="#f1c9c2"/><circle cx="21" cy="20" r="2.4" fill="#f1c9c2"/></pattern>
+          <pattern id="sage-knit" width="22" height="22" patternUnits="userSpaceOnUse">
+            <rect width="22" height="22" fill="#a8b69a"/>
+            <path d="M6-2c-5 4 5 8 0 12s5 8 0 12M16-2c-5 4 5 8 0 12s5 8 0 12" fill="none" stroke="#d3dac8" stroke-width="2.2" opacity=".78"/>
+          </pattern>
           <linearGradient id="fabric-sage" x2=".2" y2="1"><stop stop-color="#c0c7ae"/><stop offset=".48" stop-color="#a8b69a"/><stop offset="1" stop-color="#77886b"/></linearGradient>
           <linearGradient id="fabric-rose" x2=".15" y2="1"><stop stop-color="#d6a0a2"/><stop offset=".55" stop-color="#bd858c"/><stop offset="1" stop-color="#9f6976"/></linearGradient>
           <linearGradient id="fabric-lavender" x2=".15" y2="1"><stop stop-color="#c3bac8"/><stop offset=".55" stop-color="#a8a0ae"/><stop offset="1" stop-color="#88808f"/></linearGradient>
@@ -61,28 +129,28 @@
           <linearGradient id="fabric-pink" x2=".15" y2="1"><stop stop-color="#e3b8b1"/><stop offset=".6" stop-color="#d2a6a4"/><stop offset="1" stop-color="#b98485"/></linearGradient>
         </defs>
 
-        <!-- Soft grass shadow beneath the garments -->
-        <ellipse cx="500" cy="482" rx="415" ry="45" fill="#526b4d" opacity=".3"/>
-
+        <!-- Soft dusty-rose rug beneath the clothing pile -->
+        <ellipse cx="500" cy="480" rx="473" ry="61" fill="#d2a6a4"/>
+        <ellipse cx="500" cy="480" rx="452" ry="46" fill="#e6d3b7"/>
         <!-- Back folds of the clothes pile -->
         <g class="back-clothes" filter="url(#softShadow)">
-          <path d="M118 435c-3-61 66-113 153-119 73-5 106 33 100 91-6 57-69 84-154 76-62-6-96-16-99-48Z" fill="#a8b69a" stroke="#82917a" stroke-width="5"/>
-          <path d="M239 390c11-62 82-103 159-95 63 7 98 48 79 96-20 49-95 69-167 54-51-10-78-27-71-55Z" fill="#bd858c" stroke="#a56c75" stroke-width="5"/>
-          <path d="M422 367c-3-55 62-95 137-91 66 4 104 41 91 84-13 47-80 69-153 60-47-6-73-21-75-53Z" fill="#a8a0ae" stroke="#8f8795" stroke-width="5"/>
-          <path d="M579 390c-3-57 59-98 133-94 66 3 104 39 94 82-11 50-74 73-147 64-50-7-78-21-80-52Z" fill="#d3c5b0" stroke="#b7a993" stroke-width="5"/>
-          <path d="M336 337c-9-52 39-94 100-98 63-5 104 26 101 66-4 48-53 72-119 70-49-2-77-12-82-38Z" fill="#718367" stroke="#5e7257" stroke-width="5"/>
+          <path d="M118 435c-3-61 66-113 153-119 73-5 106 33 100 91-6 57-69 84-154 76-62-6-96-16-99-48Z" fill="url(#sage-knit)"/>
+          <path d="M239 390c11-62 82-103 159-95 63 7 98 48 79 96-20 49-95 69-167 54-51-10-78-27-71-55Z" fill="#bd858c"/>
+          <path d="M422 367c-3-55 62-95 137-91 66 4 104 41 91 84-13 47-80 69-153 60-47-6-73-21-75-53Z" fill="#a8a0ae"/>
+          <path d="M579 390c-3-57 59-98 133-94 66 3 104 39 94 82-11 50-74 73-147 64-50-7-78-21-80-52Z" fill="#d3c5b0"/>
+          <path d="M336 337c-9-52 39-94 100-98 63-5 104 26 101 66-4 48-53 72-119 70-49-2-77-12-82-38Z" fill="#718367"/>
           <!-- Pink blob fills the gap above the beige piece, overlapping purple and beige beneath the cream knit. -->
           <g transform="translate(652 292) scale(1.14) translate(-652 -292)">
-            <path d="M576 294c4-26 38-44 82-42 45 2 75 24 69 48-6 25-50 39-99 31-34-5-55-20-52-37Z" fill="#ba818c" stroke="#9f6875" stroke-width="5"/>
+            <path d="M576 294c4-26 38-44 82-42 45 2 75 24 69 48-6 25-50 39-99 31-34-5-55-20-52-37Z" fill="#ba818c"/>
+            <path d="M576 294c4-26 38-44 82-42 45 2 75 24 69 48-6 25-50 39-99 31-34-5-55-20-52-37Z" fill="url(#rose-dots)" opacity=".8"/>
           </g>
-          <path d="M366 267c4-53 51-97 119-99 73-2 121 35 109 78-12 43-73 59-141 54-53-4-90-12-87-33Z" fill="#f1e7d6" stroke="#d9cbb7" stroke-width="5"/>
-          <path d="M382 269c5-42 42-77 101-80 59-3 99 23 100 54-29 16-65 20-105 18-40-1-72 9-96 8Z" fill="url(#knit)" opacity=".9"/>
+          <path d="M366 267c4-53 51-97 119-99 73-2 121 35 109 78-12 43-73 59-141 54-53-4-90-12-87-33Z" fill="url(#knit)"/>
         </g>
         <!-- Animated vector Doggo: rounded triangle ears, a little sprout, and a bouncy body. -->
         <g transform="translate(0 -38)">
         <g class="doggo" id="doggo" filter="url(#softShadow)">
           <!-- tail sits behind the body and wags -->
-          <circle class="tail" cx="635" cy="397" r="43" fill="#B29D93" stroke="#8B776E" stroke-width="13"/>
+          <circle class="tail" cx="635" cy="397" r="43" fill="#B29D93" stroke="#98837A" stroke-width="13"/>
           <!-- seated body -->
           <ellipse cx="501" cy="424" rx="120" ry="111" fill="#AB978D"/>
           <ellipse cx="502" cy="429" rx="77" ry="99" fill="#B29D93" opacity=".42"/>
@@ -95,43 +163,46 @@
           <path d="M613 222 Q617 228 619 220 L631 177 Q633 169 624 171 L560 186 Q550 189 558 196Z" fill="#BD739B"/>
           <!-- eyes are set wider apart -->
           <g class="eye-blink">
-            <ellipse cx="428" cy="292" rx="25" ry="29" fill="#FFFDF8"/>
-            <ellipse cx="572" cy="292" rx="25" ry="29" fill="#FFFDF8"/>
-            <circle cx="434" cy="295" r="14" fill="#171513"/><circle cx="566" cy="295" r="14" fill="#171513"/>
-            <circle cx="439" cy="289" r="5" fill="#fff"/><circle cx="571" cy="289" r="5" fill="#fff"/>
+            <circle cx="420" cy="292" r="32" fill="#9F8C82" opacity=".72"/>
+            <circle cx="580" cy="292" r="32" fill="#9F8C82" opacity=".72"/>
+            <circle cx="420" cy="292" r="24" fill="#FFFDF8"/>
+            <circle cx="580" cy="292" r="24" fill="#FFFDF8"/>
+            <circle cx="426" cy="295" r="14" fill="#171513"/><circle cx="574" cy="295" r="14" fill="#171513"/>
+            <circle cx="431" cy="289" r="5" fill="#fff"/><circle cx="579" cy="289" r="5" fill="#fff"/>
           </g>
           <!-- muzzle and friendly nose -->
-          <ellipse cx="500" cy="337" rx="65" ry="45" fill="#9F8C82"/>
+          <ellipse cx="500" cy="337" rx="50" ry="45" fill="#9F8C82"/>
           <ellipse cx="500" cy="326" rx="29" ry="22" fill="#332D2A"/>
-          <path d="M500 346q-1 18-17 19m17-19q1 18 17 19m-34 0q17 16 34 0" fill="none" stroke="#534139" stroke-width="5" stroke-linecap="round"/>
+          <path d="M500 346v12m0 0q-7 14-17 2m17-2q7 14 17 2" fill="none" stroke="#332D2A" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
           <!-- leafy sprout -->
-          <g class="sprout" fill="#405B43" stroke="#405B43" stroke-width="5" stroke-linecap="round">
-            <path d="M500 174q-4-48 2-76" fill="none"/>
-            <ellipse cx="489" cy="122" rx="10" ry="19" transform="rotate(-48 489 122)" stroke="none"/>
-            <ellipse cx="510" cy="102" rx="9" ry="18" transform="rotate(30 510 102)" stroke="none"/>
-            <ellipse cx="491" cy="83" rx="8" ry="16" transform="rotate(-30 491 83)" stroke="none"/>
+          <g class="sprout" fill="#405B43">
+            <path d="M500 174q-4-48 2-82" fill="none" stroke="#332D2A" stroke-width="5" stroke-linecap="round"/>
+            <ellipse cx="486" cy="158" rx="10" ry="19" transform="rotate(-58 486 158)"/>
+            <ellipse cx="514" cy="143" rx="10" ry="19" transform="rotate(58 514 143)"/>
+            <ellipse cx="486" cy="94" rx="9" ry="17" transform="rotate(-50 486 94)"/>
+            <ellipse cx="514" cy="94" rx="9" ry="17" transform="rotate(50 514 94)"/>
           </g>
         </g>
         </g>
 
         <!-- Front garments hide Doggo's lower body, making the pop feel real -->
         <g class="front-clothes" filter="url(#softShadow)">
-          <path d="M147 421c44-44 139-58 207-37 49 15 69 54 42 82-36 39-152 49-231 28-57-15-62-42-18-73Z" fill="#d2a6a4" stroke="#b98485" stroke-width="5"/>
-          <path d="M223 456c26-48 113-66 177-44 58 19 70 62 24 83-55 25-162 24-199-7-13-11-14-21-2-32Z" fill="url(#stripes)" stroke="#c1b5a7" stroke-width="5"/>
-          <path d="M565 416c33-42 116-56 174-34 56 21 61 61 14 84-54 26-147 23-183-5-17-13-19-29-5-45Z" fill="#7e906f" stroke="#65785b" stroke-width="5"/>
-          <path d="M620 458c32-48 123-58 184-31 44 20 49 53 8 72-51 24-143 17-184-8-16-10-19-21-8-33Z" fill="#ba818c" stroke="#9f6875" stroke-width="5"/>
-          <path d="M373 460c21-47 92-66 153-47 52 17 66 55 29 77-45 27-133 27-174 3-19-11-21-21-8-33Z" fill="#e9decf" stroke="#cabba7" stroke-width="5"/>
+          <path d="M147 421c44-44 139-58 207-37 49 15 69 54 42 82-36 39-152 49-231 28-57-15-62-42-18-73Z" fill="#d2a6a4"/>
+          <path d="M223 456c26-48 113-66 177-44 58 19 70 62 24 83-55 25-162 24-199-7-13-11-14-21-2-32Z" fill="url(#stripes)"/>
+          <path d="M565 416c33-42 116-56 174-34 56 21 61 61 14 84-54 26-147 23-183-5-17-13-19-29-5-45Z" fill="#7e906f"/>
+          <path d="M620 458c32-48 123-58 184-31 44 20 49 53 8 72-51 24-143 17-184-8-16-10-19-21-8-33Z" fill="#ba818c"/>
+          <path d="M620 458c32-48 123-58 184-31 44 20 49 53 8 72-51 24-143 17-184-8-16-10-19-21-8-33Z" fill="url(#rose-dots)" opacity=".8"/>
+          <path d="M373 460c21-47 92-66 153-47 52 17 66 55 29 77-45 27-133 27-174 3-19-11-21-21-8-33Z" fill="#e9decf"/>
           <path d="M394 464c37-13 95-16 143-4m-158 20c42-12 101-12 151 0" fill="none" stroke="#c8b9a7" stroke-width="5" stroke-linecap="round"/>
           <!-- paws resting over the clothes -->
           <g class="paws">
-            <circle cx="420" cy="411" r="34" fill="#8B776E"/><circle cx="420" cy="411" r="24" fill="#B29D93"/>
-            <circle cx="580" cy="409" r="34" fill="#8B776E"/><circle cx="580" cy="409" r="24" fill="#B29D93"/>
+            <circle cx="420" cy="411" r="34" fill="#98837A"/><circle cx="420" cy="411" r="24" fill="#B29D93"/>
+            <circle cx="580" cy="409" r="34" fill="#98837A"/><circle cx="580" cy="409" r="24" fill="#B29D93"/>
           </g>
         </g>
       </svg>
     </div>
 
-    <footer class="caption"><span class="caption-star">&#10022;</span> Little things can find a new home <span class="caption-star">&#10022;</span></footer>
     <div class="sr-only" id="status" aria-live="polite">The story is about to begin.</div>
   </main>
   <script src="main.js"></script>
