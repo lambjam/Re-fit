@@ -120,6 +120,7 @@ button { font: inherit; }
   .reveal { width: min(70vw, 500px); }
 }
 @media (min-width: 1200px) and (max-height: 950px) {
+  .reveal { top: 0; width: min(45vw, 370px); }
   .sprout { scale: .54; }
 }
 @media (prefers-reduced-motion: reduce) {
