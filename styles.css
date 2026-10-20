@@ -1,0 +1,111 @@
+:root {
+  --night: #203653;
+  --night-light: #2d4a69;
+  --grass: #9bb185;
+  --grass-light: #b6c49c;
+  --forest: #405b43;
+  --cream: #f1e7d6;
+  --mauve: #bd858c;
+  --sage: #7e906f;
+  --lavender: #a8a0ae;
+  --ink: #293c33;
+}
+
+* { box-sizing: border-box; }
+html, body { width: 100%; min-height: 100%; margin: 0; }
+body { font-family: "DM Sans", sans-serif; color: #f5f1e8; background: var(--night); }
+button { font: inherit; }
+
+.story {
+  position: relative;
+  isolation: isolate;
+  min-height: 100svh;
+  overflow: hidden;
+  background: linear-gradient(180deg, #263f60 0%, #314e6d 50%, #54716f 79%, #9bb185 100%);
+}
+.stars { position: absolute; inset: 0 0 24%; overflow: hidden; pointer-events: none; }
+.star { position: absolute; width: 3px; height: 3px; border-radius: 50%; background: #fff; opacity: .65; box-shadow: 0 0 7px #fff; animation: twinkle 2.7s ease-in-out infinite alternate; }
+@keyframes twinkle { to { opacity: .2; transform: scale(.7); } }
+.moon-glow { position: absolute; top: 9%; left: 50%; width: min(72vw, 820px); aspect-ratio: 1; transform: translateX(-50%); border-radius: 50%; background: radial-gradient(circle, rgba(187,205,213,.12), transparent 68%); pointer-events: none; }
+
+.topbar { position: absolute; z-index: 10; top: 16px; left: clamp(16px, 2vw, 26px); right: 5vw; display: flex; align-items: center; justify-content: space-between; }
+.wordmark { display: block; width: 58px; height: 58px; overflow: hidden; border-radius: 14px; line-height: 0; }
+.wordmark-image { display: block; width: 100%; height: 100%; object-fit: cover; }
+.wordmark-leaves, .word-leaf { color: #8ba777; }
+.wordmark-leaves { display: inline-flex; width: .88em; height: .8em; align-items: center; vertical-align: -.05em; }
+.wordmark-leaves svg { width: 100%; height: 100%; overflow: visible; }
+.top-note { color: rgba(246,244,232,.68); font-size: .8rem; letter-spacing: .07em; }
+.replay { display: inline-flex; align-items: center; gap: 8px; padding: 10px 15px; border: 1px solid rgba(255,255,255,.3); border-radius: 999px; color: #f7f3e9; background: rgba(22,39,60,.2); cursor: pointer; transition: background .2s, transform .2s; }
+.replay:hover { background: rgba(255,255,255,.12); transform: translateY(-1px); }
+.replay svg { width: 16px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+
+.clip-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
+.reveal { position: absolute; z-index: 5; top: clamp(58px, 8vh, 90px); left: 50%; width: min(78vw, 430px); aspect-ratio: 2; overflow: hidden; background: #faf3e5; clip-path: url(#logoCloud); filter: drop-shadow(0 12px 24px rgba(14, 28, 39, .18)); transform: translate(-50%, -12px) scale(.97); opacity: 0; pointer-events: none; }
+.story.playing .reveal { animation: titleReveal .9s cubic-bezier(.2,.8,.2,1) 5.15s forwards; }
+@keyframes titleReveal { to { transform: translate(-50%, 0) scale(1); opacity: 1; } }
+.refit-logo { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; transform: scale(.72); }
+.meet { margin: 0 0 -4px; font: 500 clamp(1.45rem, 3vw, 2rem)/1.1 "Playfair Display", Georgia, serif; color: #f0e8d7; }
+.hero-wordmark { position: relative; display: inline-block; padding: 0 22px; color: #e8e0cf; font: 500 clamp(4rem, 10vw, 6.2rem)/.98 "Playfair Display", Georgia, serif; letter-spacing: -.075em; }
+.word-leaf { position: absolute; left: -2px; top: -.17em; display: block; width: .46em; height: .46em; transform: rotate(-37deg); }
+.word-leaf svg { display: block; width: 100%; height: 100%; overflow: visible; }
+.tagline { margin: 12px 0 0; color: rgba(246,244,232,.76); font-size: .9rem; letter-spacing: .1em; }
+
+.meadow { position: absolute; z-index: 0; inset: auto 0 0; height: 31vh; min-height: 190px; background: linear-gradient(180deg, #9bad86, #81986f); }
+.hill { position: absolute; width: 120%; left: -10%; border-radius: 50% 50% 0 0 / 25% 25% 0 0; }
+.hill-back { height: 82%; top: -32%; background: #71876f; opacity: .75; transform: rotate(-3deg); }
+.hill-front { height: 84%; top: -13%; background: linear-gradient(180deg, #b0c198, #8ca378); transform: rotate(2deg); }
+.grass-sprigs { position: absolute; z-index: 1; color: #e8e2ce; font-size: 20px; }
+.sprig-one { left: 12%; top: 30%; }.sprig-two { right: 13%; top: 43%; font-size: 15px; }
+
+.scene { position: absolute; z-index: 2; bottom: max(3vh, 12px); left: 50%; width: min(96vw, 1060px); transform: translateX(-50%); }
+.illustration { display: block; width: 100%; height: auto; overflow: visible; }
+.doggo { opacity: 0; transform-box: view-box; transform-origin: 50% 100%; }
+.story.playing .doggo { animation: doggoPop 1.2s cubic-bezier(.2,.85,.3,1) 3.75s both, doggoIdle 2.2s ease-in-out 4.95s infinite alternate; }
+@keyframes doggoPop {
+  0% { opacity: 0; transform: translateY(175px) scale(.56) rotate(-8deg); }
+  38% { opacity: 1; transform: translateY(-42px) scale(1.08) rotate(5deg); }
+  58% { transform: translateY(16px) scale(.96) rotate(-3deg); }
+  78% { transform: translateY(-10px) scale(1.025) rotate(2deg); }
+  100% { opacity: 1; transform: translateY(0) scale(1) rotate(0); }
+}
+@keyframes doggoIdle { to { transform: translateY(-7px) rotate(1deg); } }
+.story.playing .tail { transform-box: fill-box; transform-origin: 0% 50%; animation: wag .34s ease-in-out 4.95s infinite alternate; }
+@keyframes wag { to { transform: rotate(17deg); } }
+.story.playing .sprout { transform-box: fill-box; transform-origin: 50% 100%; animation: sproutWiggle .55s ease-in-out 4.95s infinite alternate; }
+@keyframes sproutWiggle { to { transform: rotate(9deg); } }
+.story.playing .back-clothes, .story.playing .front-clothes { transform-box: fill-box; transform-origin: 50% 100%; animation: pileBounce .65s ease-out 3.55s both; }
+@keyframes pileBounce { 0%,100% { transform: scale(1); } 25% { transform: scale(1.035,.91); } 55% { transform: scale(.985,1.055); } 78% { transform: scale(1.012,.985); } }
+.paws { opacity: 0; }
+.story.playing .paws { animation: pawsPop .35s ease-out 4.1s forwards; }
+@keyframes pawsPop { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+.falling-hanger { position: absolute; z-index: 4; left: 50%; top: -145px; width: clamp(88px, 13vw, 138px); transform: translateX(-50%); opacity: 0; }
+.falling-hanger svg { display: block; width: 100%; filter: drop-shadow(0 5px 12px rgba(255,205,91,.6)); }
+.story.playing .falling-hanger { animation: hangerDrop 3.3s cubic-bezier(.35,.02,.55,1) .35s forwards; }
+@keyframes hangerDrop {
+  0% { opacity: 0; top: -145px; transform: translateX(-50%) rotate(-20deg); }
+  12% { opacity: 1; }
+  32% { transform: translateX(-50%) rotate(18deg); }
+  58% { transform: translateX(-50%) rotate(-12deg); }
+  82% { transform: translateX(-50%) rotate(8deg); }
+  95% { opacity: 1; }
+  100% { opacity: 0; top: 70vh; transform: translateX(-50%) rotate(0) scale(.7); }
+}
+.caption { position: absolute; z-index: 3; bottom: 15px; left: 50%; width: max-content; max-width: 90%; transform: translateX(-50%); color: rgba(249,245,229,.7); font: 500 .78rem "Playfair Display", Georgia, serif; letter-spacing: .08em; text-align: center; }
+.caption-star { color: #e9c99b; padding: 0 .6em; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+@media (max-width: 600px) {
+  .topbar { inset: 14px 16px auto; }.top-note { display: none; }
+  .wordmark { width: 50px; height: 50px; }.replay { padding: 9px 12px; }
+  .scene { width: 118vw; bottom: 9vh; }
+  .meadow { height: 29vh; }
+  .reveal { top: 12vh; }
+  .hero-wordmark { font-size: clamp(3.8rem, 18vw, 5rem); }
+  .caption { bottom: 12px; font-size: .7rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; }
+  .story.playing .doggo { opacity: 1; transform: none; }
+  .story.playing .reveal { opacity: 1; transform: translate(-50%,0); }
+  .story.playing .paws { opacity: 1; animation: none; }
+}
