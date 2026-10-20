@@ -147,7 +147,7 @@ button { font: inherit; }
   .reveal { top: -12px; width: min(40vw, 216px); }
 }
 @media (width: 2556px) and (height: 1179px) {
-  .reveal { top: calc(clamp(10px, 2vh, 20px) - 25px); }
+  .reveal { top: calc(clamp(10px, 2vh, 20px) - 15px); width: min(72vw, 589px); }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; }
