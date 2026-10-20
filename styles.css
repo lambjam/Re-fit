@@ -35,8 +35,8 @@ button { font: inherit; }
 .wordmark-leaves { display: inline-flex; width: .88em; height: .8em; align-items: center; vertical-align: -.05em; }
 .wordmark-leaves svg { width: 100%; height: 100%; overflow: visible; }
 .top-note { color: rgba(246,244,232,.68); font-size: .8rem; letter-spacing: .07em; }
-.replay { display: inline-flex; align-items: center; gap: 8px; padding: 10px 15px; border: 1px solid rgba(64,91,67,.35); border-radius: 999px; color: #405b43; background: rgba(255,255,255,.42); cursor: pointer; transition: background .2s, transform .2s; }
-.replay:hover { background: rgba(255,255,255,.72); transform: translateY(-1px); }
+.replay { display: inline-flex; align-items: center; gap: 8px; padding: 10px 15px; border: 1px solid rgba(255,255,255,.58); border-radius: 999px; color: #fffdf7; background: rgba(16,19,18,.68); box-shadow: 0 2px 8px rgba(35,27,20,.16); backdrop-filter: blur(3px); cursor: pointer; transition: background .2s, transform .2s; }
+.replay:hover { background: rgba(16,19,18,.84); transform: translateY(-1px); }
 .replay svg { width: 16px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
 
 .reveal { position: absolute; z-index: 5; top: clamp(10px, 2vh, 20px); left: 50%; width: min(76vw, 620px); aspect-ratio: 1150 / 590; overflow: visible; background: transparent; transform: translate(-50%, -12px) scale(.97); opacity: 0; pointer-events: none; }
@@ -109,7 +109,7 @@ button { font: inherit; }
   .wardrobe-scene { width:min(40vw,165px); right:1vw; bottom:calc(29vh - 17px); }
   .laundry-basket-scene { width:min(34vw,145px); left:2vw; bottom:calc(29vh - 17px); }
   .meadow { height: 29vh; }
-  .reveal { top: 10px; width: min(92vw, 520px); }
+  .reveal { top: clamp(110px, 20vh, 180px); width: min(92vw, 520px); }
   .hero-wordmark { font-size: clamp(3.8rem, 18vw, 5rem); }
   .caption { bottom: 12px; font-size: .7rem; }
 }
