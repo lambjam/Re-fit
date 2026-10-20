@@ -36,7 +36,7 @@ button { font: inherit; }
 .wordmark-leaves { display: inline-flex; width: .88em; height: .8em; align-items: center; vertical-align: -.05em; }
 .wordmark-leaves svg { width: 100%; height: 100%; overflow: visible; }
 .top-note { color: rgba(246,244,232,.68); font-size: .8rem; letter-spacing: .07em; }
-.replay { display: inline-flex; align-items: center; justify-content:center; gap: 7px; width:auto; height:36px; padding:7px 12px; border: 1px solid rgba(255,255,255,.58); border-radius: 999px; color: #fffdf7; background: rgba(16,19,18,.68); box-shadow: 0 2px 8px rgba(35,27,20,.16); backdrop-filter: blur(3px); font-family: "Lora", Georgia, serif; font-size:.78rem; line-height:1.2; cursor: pointer; transition: background .2s, transform .2s; }
+.replay { display: inline-flex; align-items: center; justify-content:center; gap: 7px; width:auto; height:36px; padding:7px 12px; border: 1px solid rgba(255,255,255,.58); border-radius: 999px; color: #fffdf7; background: rgba(16,19,18,.68); box-shadow: 0 2px 8px rgba(35,27,20,.16); backdrop-filter: blur(3px); font-family: "Lora", Georgia, serif !important; font-size:.78rem; font-weight:500; line-height:1.2; cursor: pointer; transition: background .2s, transform .2s; }
 .replay:hover { background: rgba(16,19,18,.84); transform: translateY(-1px); }
 .replay svg { width: 16px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
 
@@ -67,7 +67,7 @@ button { font: inherit; }
 .laundry-basket-scene svg { display:block; width:100%; height:auto; overflow:visible; }
 .scene { position: absolute; z-index: 2; bottom: max(3vh, 12px); left: 50%; width: min(96vw, 1060px); transform: translateX(-50%); }
 .illustration { display: block; width: 100%; height: auto; overflow: visible; }
-.scroll-cue { position:absolute; z-index:6; left:50%; bottom:clamp(12px,2vh,22px); display:inline-flex; align-items:center; justify-content:center; gap:8px; width:150px; height:42px; padding:10px 16px; border:1px solid rgba(255,255,255,.58); border-radius:999px; color:#fffdf7; background:rgba(16,19,18,.68); box-shadow:0 2px 8px rgba(35,27,20,.16); backdrop-filter:blur(3px); font-family:"Lora",Georgia,serif; font-size:.82rem; line-height:1.2; letter-spacing:.04em; text-decoration:none; transform:translateX(-50%); transition:background .2s,transform .2s; }
+.scroll-cue { position:absolute; z-index:6; left:50%; bottom:clamp(12px,2vh,22px); display:inline-flex; align-items:center; justify-content:center; gap:8px; width:150px; height:42px; padding:10px 16px; border:1px solid rgba(255,255,255,.58); border-radius:999px; color:#fffdf7; background:rgba(16,19,18,.68); box-shadow:0 2px 8px rgba(35,27,20,.16); backdrop-filter:blur(3px); font-family:"Lora",Georgia,serif !important; font-size:.82rem; font-weight:500; line-height:1.2; letter-spacing:.04em; text-decoration:none; transform:translateX(-50%); transition:background .2s,transform .2s; }
 .scroll-cue:hover { background:rgba(16,19,18,.84); transform:translate(-50%,-2px); }
 .scroll-cue svg { width:16px; height:16px; fill:none; stroke:currentColor; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
 .scroll-cue:focus-visible { outline:3px solid #fffdf7; outline-offset:3px; }
@@ -121,6 +121,7 @@ button { font: inherit; }
 @media (max-width: 600px) {
   .topbar { inset: 14px 16px auto; }.top-note { display: none; }
   .wordmark { width: 50px; height: 50px; }.replay { padding: 9px 12px; }
+  .replay, .scroll-cue { font-family: "Lora", Georgia, serif !important; font-weight: 500; }
   .scene { width: 118vw; bottom: 9vh; }
   .wardrobe-scene { width:min(40vw,165px); right:1vw; bottom:calc(29vh - 17px); }
   .laundry-basket-scene { width:min(34vw,145px); left:2vw; bottom:calc(29vh - 17px); }
