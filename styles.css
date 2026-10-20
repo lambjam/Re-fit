@@ -109,7 +109,7 @@ button { font: inherit; }
   .wardrobe-scene { width:min(40vw,165px); right:1vw; bottom:calc(29vh - 17px); }
   .laundry-basket-scene { width:min(34vw,145px); left:2vw; bottom:calc(29vh - 17px); }
   .meadow { height: 29vh; }
-  .reveal { top: calc(clamp(70px, 11vh, 100px) + 25px); width: min(92vw, 520px); }
+  .reveal { top: calc(clamp(70px, 11vh, 100px) + 10px); width: min(92vw, 520px); }
   .hero-wordmark { font-size: clamp(3.8rem, 18vw, 5rem); }
   .caption { bottom: 12px; font-size: .7rem; }
 }
