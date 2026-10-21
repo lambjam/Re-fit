@@ -25,8 +25,6 @@
     }, 6100);
   }
 
-  document.getElementById('replay').addEventListener('click', playStory);
-
   const navToggle = document.getElementById('nav-toggle');
   const navClose = document.getElementById('nav-close');
   const siteDrawer = document.getElementById('site-navigation');
@@ -108,6 +106,43 @@
     visionSectionObserver.observe(visionSection);
   } else if (visionSection) {
     visionSection.classList.add('is-entered');
+  }
+
+  const journeySection = document.getElementById('journey-section');
+  const journeyItems = journeySection ? [...journeySection.querySelectorAll('.journey-item')] : [];
+  const queuedJourneyItems = new Set();
+  let journeyReady = false;
+  const revealJourneyItem = (item) => {
+    if (item.classList.contains('is-marker-visible')) return;
+    item.classList.add('is-marker-visible');
+    window.setTimeout(() => item.classList.add('is-card-visible'), 210);
+    window.setTimeout(() => item.classList.add('is-sticker-visible'), 720);
+  };
+  if (journeySection && 'IntersectionObserver' in window) {
+    const journeySectionObserver = new IntersectionObserver(([entry]) => {
+      if (!entry.isIntersecting) return;
+      journeySection.classList.add('is-entered');
+      window.setTimeout(() => {
+        journeyReady = true;
+        queuedJourneyItems.forEach(revealJourneyItem);
+        queuedJourneyItems.clear();
+      }, 1880);
+      journeySectionObserver.unobserve(journeySection);
+    }, { threshold: 0.08 });
+    journeySectionObserver.observe(journeySection);
+
+    const journeyItemObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        if (journeyReady) revealJourneyItem(entry.target);
+        else queuedJourneyItems.add(entry.target);
+        journeyItemObserver.unobserve(entry.target);
+      });
+    }, { threshold: 0.28, rootMargin: '0px 0px -8% 0px' });
+    journeyItems.forEach((item) => journeyItemObserver.observe(item));
+  } else if (journeySection) {
+    journeySection.classList.add('is-entered');
+    journeyItems.forEach(revealJourneyItem);
   }
 
   window.addEventListener('DOMContentLoaded', playStory, { once: true });

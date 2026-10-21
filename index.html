@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261020-mobile-stickers-svg-heart">
+  <link rel="stylesheet" href="styles.css?v=20261021-journey-scroll-story">
 </head>
 <body>
   <main class="story" id="story">
@@ -17,10 +17,10 @@
     <div class="moon-glow" aria-hidden="true"></div>
 
     <header class="topbar">
-      <button class="replay" id="replay" type="button" aria-label="Replay the Doggo animation">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11a8 8 0 0 0-14.9-3L3 11m0-6v6h6m-5 2a8 8 0 0 0 14.9 3L21 13m0 6v-6h-6"/></svg>
-        Replay
-      </button>
+      <nav class="home-tabs" aria-label="Explore Re-Fit">
+        <a class="home-tab" href="research.html">Research &amp; Statistics</a>
+        <a class="home-tab" href="about.html">About us</a>
+      </nav>
     </header>
 
     <section class="reveal" id="brand" aria-label="Re-Fit brand reveal">
@@ -226,7 +226,10 @@
       <a href="#vision-section" data-nav-link><span>Our vision &amp; impact</span><span aria-hidden="true">04</span></a>
       <a href="#journey-section" data-nav-link><span>Our journey</span><span aria-hidden="true">05</span></a>
     </nav>
-    <p class="drawer-note">More pages will find a home here.</p>
+    <nav class="section-nav section-nav-secondary" aria-label="More Re-Fit pages">
+      <a href="research.html"><span>Research &amp; statistics</span><span aria-hidden="true">↗</span></a>
+      <a href="about.html"><span>About us</span><span aria-hidden="true">↗</span></a>
+    </nav>
   </aside>
 
   <section class="more-section" id="next-section" aria-labelledby="more-title">
@@ -385,7 +388,7 @@
   </section>
   <section class="journey-section" id="journey-section" aria-labelledby="journey-title">
     <div class="journey-content">
-      <p class="journey-eyebrow">One thoughtful step at a time</p>
+      <p class="journey-eyebrow"><span class="journey-typewriter">One thoughtful step at a time</span></p>
       <h2 id="journey-title">Our journey</h2>
       <p class="journey-lead">From the first idea to the work underway now, here are the steps behind Re-Fit.</p>
       <ol class="journey-timeline">
@@ -480,6 +483,10 @@
             </g>
           </svg>
           <img class="journey-finish-logo" src="assets/refit%20coming%20soon.png" alt="Re-Fit coming soon">
+          <footer class="journey-contact" aria-labelledby="contact-title">
+            <h3 id="contact-title">Contact us</h3>
+            <a href="mailto:refit.official.app@gmail.com">refit.official.app@gmail.com</a>
+          </footer>
         </li>
       </ol>
     </div>
