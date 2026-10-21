@@ -1,9 +1,0 @@
-{
-  "name": "re-fit-doggo-story",
-  "version": "1.0.0",
-  "private": true,
-  "description": "A small animated Re-Fit landing page",
-  "scripts": {
-    "start": "node server.js"
-  }
-}
