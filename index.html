@@ -17,9 +17,9 @@
     <div class="moon-glow" aria-hidden="true"></div>
 
     <header class="topbar">
-      <a class="wordmark" href="#story" aria-label="Re-Fit home">
+      <button class="wordmark" id="nav-toggle" type="button" aria-label="Open main navigation" aria-expanded="false" aria-controls="site-navigation">
         <img class="wordmark-image" src="assets/logo-corner-square.png" alt="">
-      </a>
+      </button>
       <button class="replay" id="replay" type="button" aria-label="Replay the Doggo animation">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11a8 8 0 0 0-14.9-3L3 11m0-6v6h6m-5 2a8 8 0 0 0 14.9 3L21 13m0 6v-6h-6"/></svg>
         Replay
@@ -211,6 +211,22 @@
     <div class="sr-only" id="status" aria-live="polite">The story is about to begin.</div>
   </main>
 
+  <div class="nav-scrim" id="nav-scrim" aria-hidden="true"></div>
+  <aside class="site-drawer" id="site-navigation" aria-label="Main navigation" aria-hidden="true" inert>
+    <div class="drawer-header">
+      <p>Explore Re-Fit</p>
+      <button class="drawer-close" id="nav-close" type="button" aria-label="Close navigation">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <nav class="section-nav" aria-label="Main pages">
+      <a href="#story" data-nav-link><span>Home</span><span aria-hidden="true">01</span></a>
+      <a href="#next-section" data-nav-link><span>Today’s problem</span><span aria-hidden="true">02</span></a>
+      <a href="#solution-section" data-nav-link><span>Meet Re-Fit</span><span aria-hidden="true">03</span></a>
+    </nav>
+    <p class="drawer-note">More pages will find a home here.</p>
+  </aside>
+
   <section class="more-section" id="next-section" aria-labelledby="more-title">
     <div class="more-content">
       <p class="more-eyebrow"><span class="typewriter">Why reusing clothes matters</span></p>
@@ -266,12 +282,13 @@
         <p class="solution-eyebrow"><span class="solution-typewriter">From your closet to a new home</span></p>
         <h2 id="flow-title">How it works</h2>
         <ol class="process-flow">
-          <li><button class="flow-card" type="button" aria-label="Number 1. Scan clothes into your wardrobe. Click to flip." aria-pressed="false"><span class="flow-card-inner"><span class="flow-card-front"><span class="flow-number">1</span><span class="flow-tap-hint">Tap to reveal</span></span><span class="flow-card-back" aria-hidden="true"><span class="flow-back-number">1</span><span class="flow-back-copy">Scan clothes into your wardrobe</span></span></span></button></li>
-          <li><button class="flow-card" type="button" aria-label="Number 2. Wear and log outfits every day. Click to flip." aria-pressed="false"><span class="flow-card-inner"><span class="flow-card-front"><span class="flow-number">2</span><span class="flow-tap-hint">Tap to reveal</span></span><span class="flow-card-back" aria-hidden="true"><span class="flow-back-number">2</span><span class="flow-back-copy">Wear and log outfits every day</span></span></span></button></li>
-          <li><button class="flow-card" type="button" aria-label="Number 3. Receive personal insights. Click to flip." aria-pressed="false"><span class="flow-card-inner"><span class="flow-card-front"><span class="flow-number">3</span><span class="flow-tap-hint">Tap to reveal</span></span><span class="flow-card-back" aria-hidden="true"><span class="flow-back-number">3</span><span class="flow-back-copy">Receive personal insights</span></span></span></button></li>
-          <li><button class="flow-card" type="button" aria-label="Number 4. Choose what to keep or donate. Click to flip." aria-pressed="false"><span class="flow-card-inner"><span class="flow-card-front"><span class="flow-number">4</span><span class="flow-tap-hint">Tap to reveal</span></span><span class="flow-card-back" aria-hidden="true"><span class="flow-back-number">4</span><span class="flow-back-copy">Choose what to keep or donate</span></span></span></button></li>
-          <li><button class="flow-card" type="button" aria-label="Number 5. Find nearby nonprofits to donate. Click to flip." aria-pressed="false"><span class="flow-card-inner"><span class="flow-card-front"><span class="flow-number">5</span><span class="flow-tap-hint">Tap to reveal</span></span><span class="flow-card-back" aria-hidden="true"><span class="flow-back-number">5</span><span class="flow-back-copy">Find nearby nonprofits to donate</span></span></span></button></li>
+          <li><button class="flow-card" type="button" aria-label="Number 1. Scan clothes into your wardrobe. Click to flip." aria-pressed="false"><span class="flow-card-inner"><span class="flow-card-front"><span class="flow-number">1</span></span><span class="flow-card-back" aria-hidden="true"><span class="flow-back-number">1</span><span class="flow-back-copy">Scan clothes into your wardrobe</span></span></span></button></li>
+          <li><button class="flow-card" type="button" aria-label="Number 2. Wear and log outfits every day. Click to flip." aria-pressed="false"><span class="flow-card-inner"><span class="flow-card-front"><span class="flow-number">2</span></span><span class="flow-card-back" aria-hidden="true"><span class="flow-back-number">2</span><span class="flow-back-copy">Wear and log outfits every day</span></span></span></button></li>
+          <li><button class="flow-card" type="button" aria-label="Number 3. Receive personal insights. Click to flip." aria-pressed="false"><span class="flow-card-inner"><span class="flow-card-front"><span class="flow-number">3</span></span><span class="flow-card-back" aria-hidden="true"><span class="flow-back-number">3</span><span class="flow-back-copy">Receive personal insights</span></span></span></button></li>
+          <li><button class="flow-card" type="button" aria-label="Number 4. Choose what to keep or donate. Click to flip." aria-pressed="false"><span class="flow-card-inner"><span class="flow-card-front"><span class="flow-number">4</span></span><span class="flow-card-back" aria-hidden="true"><span class="flow-back-number">4</span><span class="flow-back-copy">Choose what to keep or donate</span></span></span></button></li>
+          <li><button class="flow-card" type="button" aria-label="Number 5. Find nearby nonprofits to donate. Click to flip." aria-pressed="false"><span class="flow-card-inner"><span class="flow-card-front"><span class="flow-number">5</span></span><span class="flow-card-back" aria-hidden="true"><span class="flow-back-number">5</span><span class="flow-back-copy">Find nearby nonprofits to donate</span></span></span></button></li>
         </ol>
+        <p class="flip-hint">(Flip the cards!)</p>
         <div class="insights-note">
           <h3>What do we mean by insights?</h3>
           <p>Re-Fit can point out similar pieces in your closet or items you have not worn in several months, helping you decide what you might donate.</p>

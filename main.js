@@ -27,6 +27,35 @@
 
   document.getElementById('replay').addEventListener('click', playStory);
 
+  const navToggle = document.getElementById('nav-toggle');
+  const navClose = document.getElementById('nav-close');
+  const siteDrawer = document.getElementById('site-navigation');
+  const navScrim = document.getElementById('nav-scrim');
+  function setNavigationOpen(isOpen) {
+    document.body.classList.toggle('nav-open', isOpen);
+    navToggle?.setAttribute('aria-expanded', String(isOpen));
+    siteDrawer?.setAttribute('aria-hidden', String(!isOpen));
+    if (siteDrawer) siteDrawer.inert = !isOpen;
+    if (isOpen) navClose?.focus();
+    else navToggle?.focus();
+  }
+  navToggle?.addEventListener('click', () => setNavigationOpen(true));
+  navClose?.addEventListener('click', () => setNavigationOpen(false));
+  navScrim?.addEventListener('click', () => setNavigationOpen(false));
+  document.querySelectorAll('[data-nav-link]').forEach((link) => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      const target = document.querySelector(link.getAttribute('href'));
+      setNavigationOpen(false);
+      target?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && document.body.classList.contains('nav-open')) {
+      setNavigationOpen(false);
+    }
+  });
+
   const processFlow = document.querySelector('.process-flow');
   const solutionSection = document.getElementById('solution-section');
   processFlow?.addEventListener('click', (event) => {
