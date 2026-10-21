@@ -173,8 +173,8 @@ body.nav-open .site-drawer { transform:translateX(0); visibility:visible; }
 .journey-figma-sticker { position:absolute; z-index:2; right:24px; bottom:-103px; width:141px; height:auto; transform:rotate(6deg); filter:drop-shadow(2px 0 #fffdf7) drop-shadow(-2px 0 #fffdf7) drop-shadow(0 2px #fffdf7) drop-shadow(0 -2px #fffdf7) drop-shadow(0 5px 5px rgba(75,61,47,.12)); }
 .journey-vscode-sticker { position:absolute; z-index:2; right:24px; bottom:-56px; width:94px; height:auto; transform:rotate(-6deg); filter:drop-shadow(2px 0 #fffdf7) drop-shadow(-2px 0 #fffdf7) drop-shadow(0 2px #fffdf7) drop-shadow(0 -2px #fffdf7) drop-shadow(0 5px 5px rgba(75,61,47,.12)); }
 .journey-finish { position:relative; display:block; width:100vw; height:190px; margin:0 0 0 calc(50% - 50vw); padding:0; background:linear-gradient(to bottom,transparent 0 46%,#fff 46% 100%); list-style:none; }
-.journey-finish-clouds { position:absolute; z-index:1; top:0; left:50%; width:calc(100vw - 48px); height:190px; transform:translateX(-50%); }
-.journey-finish-logo { position:absolute; z-index:2; top:calc(50% + 15px); left:50%; display:block; width:min(520px,72vw); height:auto; transform:translate(-50%,-50%); }
+.journey-finish-clouds { position:absolute; z-index:1; top:0; left:50%; width:100vw; height:190px; transform:translateX(-50%); }
+.journey-finish-logo { position:absolute; z-index:2; top:calc(50% + 15px); left:50%; display:block; width:min(420px,62vw); height:auto; transform:translate(-50%,-50%); }
 .journey-stage { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:8px 14px; margin:0 0 9px; color:#71876a; font-size:.75rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; }
 .journey-status { padding:5px 10px; border-radius:999px; color:#405b43; background:rgba(182,196,156,.4); font-size:.68rem; letter-spacing:.04em; }
 .journey-card h3 { margin:0; color:#405b43; font:500 1.25rem/1.35 "Lora",Georgia,serif; }
@@ -236,8 +236,6 @@ body.nav-open .site-drawer { transform:translateX(0); visibility:visible; }
 .insights-note p { max-width:690px; margin:8px auto 0; color:#59694f; line-height:1.65; }
 .feature-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
 .feature-card { min-height:205px; padding:25px 26px; border:1px solid rgba(64,91,67,.15); border-radius:22px; background:rgba(255,252,244,.82); box-shadow:0 8px 20px rgba(73,84,61,.06); }
-.feature-card-digital-closet { position:relative; padding-bottom:72px; }
-.digital-wardrobe-sticker { position:absolute; z-index:1; right:20px; bottom:-24px; width:82px; height:auto; overflow:visible; transform:rotate(6deg); filter:drop-shadow(2px 0 #fffdf7) drop-shadow(-2px 0 #fffdf7) drop-shadow(0 2px #fffdf7) drop-shadow(0 -2px #fffdf7) drop-shadow(0 5px 5px rgba(75,61,47,.12)); }
 .feature-card-wide { grid-column:1/-1; min-height:0; }
 .feature-icon { width:34px; height:34px; display:grid; place-items:center; margin-bottom:14px; border-radius:12px; background:#e9eddf; color:#607553; font-size:1.35rem; }
 .feature-icon svg { display:block; width:21px; height:21px; fill:none; stroke:currentColor; stroke-width:1.65; stroke-linecap:round; stroke-linejoin:round; }
@@ -307,7 +305,7 @@ body.nav-open .site-drawer { transform:translateX(0); visibility:visible; }
   .future-vision { margin-top:38px; }
   .future-vision-grid { grid-template-columns:1fr; gap:13px; }
   .future-vision-card { min-height:0; padding:22px; }
-  .journey-section { padding:72px 18px; }
+  .journey-section { padding:72px 18px 0; }
   .journey-lead { margin-bottom:30px; }
   .journey-timeline { gap:16px; }
   .journey-timeline::before { top:0; right:auto; bottom:0; left:8px; width:28px; background-image:linear-gradient(#ad9275,#ad9275); background-size:100% 100%; }
@@ -317,15 +315,15 @@ body.nav-open .site-drawer { transform:translateX(0); visibility:visible; }
   .journey-marker::before { width:32px; height:32px; font-size:.66rem; }
   .journey-item:nth-child(n) .journey-card { grid-column:2; align-self:center; margin:0; padding:20px; border-radius:19px; }
   .journey-item:first-child .journey-card, .journey-survey-item .journey-card, .journey-instagram-item .journey-card, .journey-research-complete .journey-card, .journey-prototype-complete .journey-card, .journey-website-item .journey-card { justify-self:stretch; width:100%; min-height:230px; }
-  .journey-doggo-sticker { right:34px; bottom:-49px; width:86px; }
-  .journey-form-sticker { right:18px; bottom:-49px; width:78px; }
-  .journey-instagram-sticker { right:18px; bottom:-49px; width:78px; }
-  .journey-research-sticker { right:18px; bottom:-88px; width:117px; }
-  .journey-figma-sticker { right:18px; bottom:-88px; width:117px; }
-  .journey-vscode-sticker { right:18px; bottom:-49px; width:78px; }
+  .journey-doggo-sticker { right:34px; bottom:12px; width:86px; }
+  .journey-form-sticker { right:18px; bottom:12px; width:78px; }
+  .journey-instagram-sticker { right:18px; bottom:12px; width:78px; }
+  .journey-research-sticker { right:18px; bottom:12px; width:117px; }
+  .journey-figma-sticker { right:18px; bottom:12px; width:117px; }
+  .journey-vscode-sticker { right:18px; bottom:12px; width:78px; }
   .journey-finish { height:170px; background:linear-gradient(to bottom,transparent 0 40%,#fff 40% 100%); }
-  .journey-finish-clouds { left:50%; width:calc(100vw - 36px); height:170px; transform:translateX(-50%); }
-  .journey-finish-logo { width:min(360px,76vw); }
+  .journey-finish-clouds { left:50%; width:100vw; height:170px; transform:translateX(-50%); }
+  .journey-finish-logo { width:min(300px,68vw); }
   .meet-refit-title { width:min(100%,520px); margin-bottom:14px; }
   .app-intro { margin-bottom:28px; padding:24px 20px; border-radius:22px; }
   .app-intro p { font-size:1rem; }
@@ -340,8 +338,6 @@ body.nav-open .site-drawer { transform:translateX(0); visibility:visible; }
   .insights-note { padding:20px; text-align:left; }
   .feature-grid { grid-template-columns:1fr; gap:13px; }
   .feature-card, .feature-card-wide { grid-column:auto; min-height:0; padding:23px; }
-  .feature-card-digital-closet { padding-bottom:68px; }
-  .digital-wardrobe-sticker { right:16px; bottom:-20px; width:74px; }
 }
 @media (width: 393px) and (height: 852px) {
   .reveal { top: calc(clamp(70px, 11vh, 100px) - 15px); }
