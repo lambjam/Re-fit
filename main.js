@@ -26,6 +26,44 @@
   }
 
   document.getElementById('replay').addEventListener('click', playStory);
+
+  const processFlow = document.querySelector('.process-flow');
+  const solutionSection = document.getElementById('solution-section');
+  processFlow?.addEventListener('click', (event) => {
+    const card = event.target.closest('.flow-card');
+    if (!card) return;
+    card.classList.toggle('is-flipped');
+    card.classList.add('is-seen');
+    card.setAttribute('aria-pressed', String(card.classList.contains('is-flipped')));
+    const cards = [...processFlow.querySelectorAll('.flow-card')];
+    if (cards.length && cards.every((item) => item.classList.contains('is-seen'))) {
+      solutionSection?.classList.add('all-cards-flipped');
+    }
+  });
+
+  const problemSection = document.getElementById('next-section');
+  if (problemSection && 'IntersectionObserver' in window) {
+    const problemSectionObserver = new IntersectionObserver(([entry]) => {
+      problemSection.classList.toggle('is-entered', entry.isIntersecting);
+    }, { threshold: 0.08 });
+    problemSectionObserver.observe(problemSection);
+  } else if (problemSection) {
+    problemSection.classList.add('is-entered');
+  }
+
+  const keepScrolling = document.querySelector('.keep-scrolling');
+  const nextSection = document.getElementById('solution-section');
+  if (keepScrolling && nextSection && 'IntersectionObserver' in window) {
+    const nextSectionObserver = new IntersectionObserver(([entry]) => {
+      keepScrolling.classList.toggle('is-hidden', entry.isIntersecting);
+      solutionSection?.classList.toggle('is-entered', entry.isIntersecting);
+    }, { threshold: 0.01 });
+    nextSectionObserver.observe(nextSection);
+  } else {
+    keepScrolling?.classList.add('is-hidden');
+    document.getElementById('solution-section')?.classList.add('is-entered');
+  }
+
   window.addEventListener('DOMContentLoaded', playStory, { once: true });
   if (document.readyState !== 'loading') playStory();
 })();
