@@ -8,8 +8,8 @@
   <meta name="description" content="A little Re-Fit story: a falling hanger, a pile of pre-loved clothes, and one very happy Doggo.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Lora:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261020-lora-mobile">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=20261020-coming-soon-logo-lower">
 </head>
 <body>
   <main class="story" id="story">
@@ -17,9 +17,6 @@
     <div class="moon-glow" aria-hidden="true"></div>
 
     <header class="topbar">
-      <button class="wordmark" id="nav-toggle" type="button" aria-label="Open main navigation" aria-expanded="false" aria-controls="site-navigation">
-        <img class="wordmark-image" src="assets/logo-corner-square.png" alt="">
-      </button>
       <button class="replay" id="replay" type="button" aria-label="Replay the Doggo animation">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11a8 8 0 0 0-14.9-3L3 11m0-6v6h6m-5 2a8 8 0 0 0 14.9 3L21 13m0 6v-6h-6"/></svg>
         Replay
@@ -211,6 +208,9 @@
     <div class="sr-only" id="status" aria-live="polite">The story is about to begin.</div>
   </main>
 
+  <button class="wordmark" id="nav-toggle" type="button" aria-label="Open main navigation" aria-expanded="false" aria-controls="site-navigation">
+    <img class="wordmark-image" src="assets/logo-corner-square.png" alt="">
+  </button>
   <div class="nav-scrim" id="nav-scrim" aria-hidden="true"></div>
   <aside class="site-drawer" id="site-navigation" aria-label="Main navigation" aria-hidden="true" inert>
     <div class="drawer-header">
@@ -223,6 +223,8 @@
       <a href="#story" data-nav-link><span>Home</span><span aria-hidden="true">01</span></a>
       <a href="#next-section" data-nav-link><span>Today’s problem</span><span aria-hidden="true">02</span></a>
       <a href="#solution-section" data-nav-link><span>Meet Re-Fit</span><span aria-hidden="true">03</span></a>
+      <a href="#vision-section" data-nav-link><span>Our vision &amp; impact</span><span aria-hidden="true">04</span></a>
+      <a href="#journey-section" data-nav-link><span>Our journey</span><span aria-hidden="true">05</span></a>
     </nav>
     <p class="drawer-note">More pages will find a home here.</p>
   </aside>
@@ -298,10 +300,17 @@
       <section class="app-features" aria-labelledby="features-title">
         <h2 id="features-title">What’s in the app</h2>
         <div class="feature-grid">
-          <article class="feature-card">
+          <article class="feature-card feature-card-digital-closet">
             <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 4h2.2c.4 1.7 1 2.7 1.8 2.7S13.4 5.7 13.8 4H16l5.6 3.8-2.2 4-3.4-1.9V20H8V9.9l-3.4 1.9-2.2-4L8 4Z"/><path d="M10.2 4c.4 1.7 1 2.7 1.8 2.7S13.4 5.7 13.8 4"/></svg></span>
             <h3>Digital Closet</h3>
             <p>All your scanned clothes live in one clear wardrobe. See what you own and plan outfits without digging through your closet.</p>
+            <svg class="digital-wardrobe-sticker" viewBox="0 0 512 512" role="img" aria-label="Purple digital wardrobe checklist icon">
+              <path d="M158 0h157l127 127v295a90 90 0 0 1-90 90H158a90 90 0 0 1-90-90V90a90 90 0 0 1 90-90Z" fill="#823ab6"/>
+              <path d="M315 0v37a90 90 0 0 0 90 90h37Z" fill="#5f278b"/>
+              <circle cx="166" cy="212" r="19" fill="#fff"/><path d="M210 198h151v29H210z" fill="#fff"/>
+              <circle cx="166" cy="282" r="19" fill="#fff"/><path d="M210 268h151v29H210z" fill="#fff"/>
+              <circle cx="166" cy="352" r="19" fill="#fff"/><path d="M210 338h151v29H210z" fill="#fff"/>
+            </svg>
           </article>
           <article class="feature-card">
             <span class="feature-icon" aria-hidden="true">＋</span>
@@ -325,6 +334,161 @@
           </article>
         </div>
       </section>
+      <a class="keep-scrolling solution-keep-scrolling" href="#vision-section">
+        <span>Keep scrolling</span>
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3v13m-5-5 5 5 5-5"/></svg>
+      </a>
+    </div>
+  </section>
+  <section class="vision-section" id="vision-section" aria-labelledby="vision-title">
+    <div class="vision-content">
+      <p class="vision-eyebrow"><span class="vision-typewriter">A more thoughtful relationship with what we wear</span></p>
+      <h2 id="vision-title">Our vision &amp; impact</h2>
+      <p class="vision-lead">We imagine a world where every piece of clothing gets noticed, valued, and worn again.</p>
+      <div class="vision-grid">
+        <article class="vision-card">
+          <span class="vision-number" aria-hidden="true">01</span>
+          <h3>See what you own</h3>
+          <p>A digital closet helps people understand what is already in their wardrobe and make more intentional choices.</p>
+        </article>
+        <article class="vision-card">
+          <span class="vision-number" aria-hidden="true">02</span>
+          <h3>Give good clothes another day</h3>
+          <p>Wear tracking and gentle insights can make overlooked pieces easier to rediscover, rewear, or pass along.</p>
+        </article>
+        <article class="vision-card">
+          <span class="vision-number" aria-hidden="true">03</span>
+          <h3>Make donating easier</h3>
+          <p>Finding nearby donation partners and preparing clothes thoughtfully can help useful garments reach new owners.</p>
+        </article>
+      </div>
+      <p class="vision-note">Our goal: help build habits that keep clothing in use for longer and reduce avoidable textile waste.</p>
+      <section class="future-vision" aria-labelledby="future-vision-title">
+        <p class="vision-eyebrow future-vision-eyebrow"><span class="future-typewriter">Where we hope to grow</span></p>
+        <h3 id="future-vision-title">Our Vision</h3>
+        <div class="future-vision-grid">
+          <article class="future-vision-card">
+            <span class="future-vision-icon" aria-hidden="true">✦</span>
+            <h4>AI Styling</h4>
+            <p>Get outfit ideas from clothes already in your digital closet, making it easier to rewear what you own.</p>
+          </article>
+          <article class="future-vision-card">
+            <span class="future-vision-icon" aria-hidden="true">◉</span>
+            <h4>Video Scan</h4>
+            <p>Scan several clothing pieces in one video to make building a digital wardrobe quicker and simpler.</p>
+          </article>
+          <article class="future-vision-card">
+            <span class="future-vision-icon" aria-hidden="true">♥</span>
+            <h4>Sustainability Pet</h4>
+            <p>Keep a sustainability pet growing with streaks for scanning clothes and logging outfits. In the future, Re-Fit could also help people resell pieces as another way to keep them in use.</p>
+          </article>
+        </div>
+      </section>
+      <a class="keep-scrolling vision-keep-scrolling" href="#journey-section">
+        <span>Keep scrolling</span>
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3v13m-5-5 5 5 5-5"/></svg>
+      </a>
+    </div>
+  </section>
+  <section class="journey-section" id="journey-section" aria-labelledby="journey-title">
+    <div class="journey-content">
+      <p class="journey-eyebrow">One thoughtful step at a time</p>
+      <h2 id="journey-title">Our journey</h2>
+      <p class="journey-lead">From the first idea to the work underway now, here are the steps behind Re-Fit.</p>
+      <ol class="journey-timeline">
+        <li class="journey-item journey-complete">
+          <span class="journey-marker" aria-hidden="true"></span>
+          <article class="journey-card">
+            <p class="journey-stage"><time datetime="2026-07-12">July 12, 2026</time><span class="journey-status">Completed</span></p>
+            <h3>The idea for Re-Fit</h3>
+            <p>The first idea for helping people make better use of the clothes they already own.</p>
+            <svg class="journey-doggo-sticker" viewBox="0 -10 160 155" role="img" aria-label="Happy Doggo sticker">
+              <ellipse cx="80" cy="76" rx="57" ry="48" fill="#B29D93"/>
+              <path d="M35 60Q32 63 29 56L14 17Q11 10 20 12l47 13Q74 27 69 33Z" fill="#98837A"/>
+              <path d="M39 47Q37 49 36 44L27 23Q26 19 31 21l29 9Q63 31 58 34Z" fill="#BD739B"/>
+              <path d="M125 60Q128 63 131 56l15-39q3-7-6-5l-47 13q-7 2-2 8Z" fill="#98837A"/>
+              <path d="M121 47Q123 49 124 44l9-21q1-4-4-2l-29 9q-5 1 0 4Z" fill="#BD739B"/>
+              <g fill="#405B43">
+                <path d="M80 30q-1.5-17.5.7-30" fill="none" stroke="#332D2A" stroke-width="1.8" stroke-linecap="round"/>
+                <ellipse cx="75" cy="24.2" rx="3.6" ry="6.9" transform="rotate(-58 75 24.2)"/>
+                <ellipse cx="85" cy="18.7" rx="3.6" ry="6.9" transform="rotate(58 85 18.7)"/>
+                <ellipse cx="75" cy=".9" rx="3.3" ry="6.2" transform="rotate(-50 75 .9)"/>
+                <ellipse cx="85" cy=".9" rx="3.3" ry="6.2" transform="rotate(50 85 .9)"/>
+              </g>
+              <circle cx="51" cy="72" r="13" fill="#9F8C82" opacity=".72"/>
+              <circle cx="109" cy="72" r="13" fill="#9F8C82" opacity=".72"/>
+              <circle cx="51" cy="72" r="10" fill="#FFFDF8"/>
+              <circle cx="109" cy="72" r="10" fill="#FFFDF8"/>
+              <circle cx="53" cy="77" r="6" fill="#171513"/>
+              <circle cx="107" cy="77" r="6" fill="#171513"/>
+              <circle cx="55" cy="74" r="2.2" fill="#fff"/>
+              <circle cx="109" cy="74" r="2.2" fill="#fff"/>
+              <ellipse cx="80" cy="93" rx="19" ry="16" fill="#9F8C82"/>
+              <ellipse cx="80" cy="85.5" rx="10.3" ry="7.8" fill="#332D2A"/>
+              <path d="M80 92.7v4.4m0 0q-5 10-12 1.4m12-1.4q5 10 12 1.4" fill="none" stroke="#332D2A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </article>
+        </li>
+        <li class="journey-item journey-complete journey-survey-item">
+          <span class="journey-marker" aria-hidden="true"></span>
+          <article class="journey-card">
+            <p class="journey-stage"><time datetime="2026-07-12">July 12, 2026</time><span class="journey-status">Completed</span></p>
+            <h3>Digital wardrobe survey</h3>
+            <p>Created a Google Form to learn what people think about a digital wardrobe and the features they would find useful.</p>
+            <img class="journey-form-sticker" src="assets/form%20icon.png" alt="Purple form checklist icon">
+          </article>
+        </li>
+        <li class="journey-item journey-instagram-item">
+          <span class="journey-marker" aria-hidden="true"></span>
+          <article class="journey-card">
+            <p class="journey-stage"><time datetime="2026-07-18">July 18, 2026</time><span class="journey-status">Published</span></p>
+            <h3>First Instagram post</h3>
+            <p>Shared Re-Fit for the first time on Instagram.</p>
+            <img class="journey-instagram-sticker" src="assets/instagram%20icon.png" alt="Instagram icon">
+          </article>
+        </li>
+        <li class="journey-item journey-complete journey-research-complete">
+          <span class="journey-marker" aria-hidden="true"></span>
+          <article class="journey-card">
+            <p class="journey-stage"><time datetime="2026-07-31">July 31, 2026</time><span class="journey-status">Completed</span></p>
+            <h3>Research complete</h3>
+            <p>Wrapped up the research that helped shape the project and its direction.</p>
+            <img class="journey-research-sticker" src="assets/research%20icon.png" alt="Research survey screenshot">
+          </article>
+        </li>
+        <li class="journey-item journey-complete journey-prototype-complete">
+          <span class="journey-marker" aria-hidden="true"></span>
+          <article class="journey-card">
+            <p class="journey-stage"><time datetime="2026-09-28">September 28, 2026</time><span class="journey-status">Completed</span></p>
+            <h3>Prototype complete</h3>
+            <p>Completed the first Re-Fit prototype.</p>
+            <img class="journey-figma-sticker" src="assets/figma.png" alt="Figma logo sticker">
+          </article>
+        </li>
+        <li class="journey-item journey-website-item">
+          <span class="journey-marker" aria-hidden="true"></span>
+          <article class="journey-card">
+            <p class="journey-stage"><time datetime="2026-10-19">October 19, 2026</time><span class="journey-status">Started</span></p>
+            <h3>Website production began</h3>
+            <p>Began building this website to share Re-Fit’s purpose, progress, and ideas.</p>
+            <img class="journey-vscode-sticker" src="assets/visual%20code%20studio.png" alt="Visual Studio Code icon sticker">
+          </article>
+        </li>
+        <li class="journey-finish" aria-label="Re-Fit coming soon">
+          <svg class="journey-finish-clouds" viewBox="0 0 1200 180" preserveAspectRatio="none" aria-hidden="true">
+            <g fill="#fff">
+              <rect y="104" width="1200" height="76"/>
+              <ellipse cx="-8" cy="105" rx="76" ry="54"/><ellipse cx="83" cy="91" rx="89" ry="68"/>
+              <ellipse cx="190" cy="103" rx="78" ry="55"/><ellipse cx="302" cy="88" rx="96" ry="72"/>
+              <ellipse cx="423" cy="102" rx="82" ry="57"/><ellipse cx="544" cy="88" rx="103" ry="74"/>
+              <ellipse cx="670" cy="102" rx="83" ry="58"/><ellipse cx="787" cy="89" rx="98" ry="71"/>
+              <ellipse cx="906" cy="103" rx="82" ry="57"/><ellipse cx="1021" cy="89" rx="101" ry="73"/>
+              <ellipse cx="1147" cy="102" rx="86" ry="60"/><ellipse cx="1222" cy="106" rx="76" ry="54"/>
+            </g>
+          </svg>
+          <img class="journey-finish-logo" src="assets/refit%20coming%20soon.png" alt="Re-Fit coming soon">
+        </li>
+      </ol>
     </div>
   </section>
   <script src="main.js"></script>

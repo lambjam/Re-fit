@@ -66,7 +66,14 @@
     card.setAttribute('aria-pressed', String(card.classList.contains('is-flipped')));
     const cards = [...processFlow.querySelectorAll('.flow-card')];
     if (cards.length && cards.every((item) => item.classList.contains('is-seen'))) {
+      const firstCompletion = !solutionSection?.classList.contains('all-cards-flipped');
       solutionSection?.classList.add('all-cards-flipped');
+      const fifthCard = cards[4];
+      if (firstCompletion && fifthCard?.classList.contains('is-seen')) {
+        window.setTimeout(() => {
+          document.querySelector('.insights-note')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 700);
+      }
     }
   });
 
@@ -91,6 +98,16 @@
   } else {
     keepScrolling?.classList.add('is-hidden');
     document.getElementById('solution-section')?.classList.add('is-entered');
+  }
+
+  const visionSection = document.getElementById('vision-section');
+  if (visionSection && 'IntersectionObserver' in window) {
+    const visionSectionObserver = new IntersectionObserver(([entry]) => {
+      visionSection.classList.toggle('is-entered', entry.isIntersecting);
+    }, { threshold: 0.08 });
+    visionSectionObserver.observe(visionSection);
+  } else if (visionSection) {
+    visionSection.classList.add('is-entered');
   }
 
   window.addEventListener('DOMContentLoaded', playStory, { once: true });
