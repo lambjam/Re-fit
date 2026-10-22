@@ -21,7 +21,7 @@
     status.textContent = 'A hanger is falling toward the clothes. Doggo is about to pop out!';
     clearTimeout(replayTimer);
     replayTimer = setTimeout(() => {
-      status.textContent = 'Meet Doggo and Re-Fit.';
+      status.textContent = 'Meet Doggo and Re-fit.';
     }, 6100);
   }
 
