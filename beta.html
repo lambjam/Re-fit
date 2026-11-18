@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7efdd">
+  <script defer src="/_vercel/insights/script.js"></script>
+  <title>Beta Testing &mdash; Re-fit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=20261021-dusty-rose-statistics">
+</head>
+<body class="subpage-body">
+  <main class="subpage">
+    <nav class="subpage-nav" aria-label="Re-fit pages">
+      <a class="subpage-home" href="index.html" aria-label="Return to the Re-fit home page"><img src="assets/logo-corner-square.png" alt="Re-fit"><span>Home</span></a>
+      <a class="subpage-nav-link" href="beta.html" aria-current="page">Beta Testing</a>
+      <a class="subpage-nav-link" href="research.html">Research &amp; Statistics</a>
+      <a class="subpage-nav-link" href="about.html">About us</a>
+    </nav>
+    <section class="subpage-content beta-layout" aria-labelledby="beta-title">
+      <div class="beta-copy">
+      <p class="subpage-eyebrow subpage-typewriter">Help test Re-fit</p>
+      <h1 id="beta-title" class="page-reveal">Beta Testing</h1>
+      <p class="subpage-lead page-reveal">Be among the first to experience Re-fit! We're preparing to launch our beta testing phase and are looking for early users to help us bring Re-fit to life.<br><br><em>OUR INITIAL LAUNCH WILL BE AVAILABLE EXCLUSIVELY TO APPLE USERS.</em></p>
+      <p class="subpage-lead page-reveal">Sign up below to join our beta testing waitlist, and we'll contact you when the app is ready to test. Your feedback will help us improve Re-fit before its official launch!</p>
+      <form class="beta-waitlist page-reveal" action="/api/waitlist" method="post">
+        <div class="waitlist-fields">
+        <label for="waitlist-contact">Email or Instagram handle</label>
+        <p id="waitlist-hint" class="waitlist-hint">Leave the best way for us to contact you about beta testing.</p>
+        <input id="waitlist-contact" name="entry.1713324163" type="text" placeholder="you@example.com or @yourhandle" required maxlength="254" aria-describedby="waitlist-hint waitlist-note" autocapitalize="none" spellcheck="false">
+        <div id="waitlist-notes-step" hidden>
+          <label for="waitlist-notes">Do you have any questions or notes? <span class="waitlist-optional">(optional)</span></label>
+          <textarea id="waitlist-notes" name="notes" rows="4" maxlength="3000" placeholder="Anything you'd like us to know?"></textarea>
+        </div>
+        <button type="submit">Join the waitlist</button>
+        <p class="waitlist-note"><em>Re-fit is still in development. Signing up means we'll contact you when beta testing becomes available.</em></p>
+        <p id="waitlist-note" class="waitlist-note">We will use your contact details to reach you about Re-fit beta testing.</p>
+        </div>
+        <p id="waitlist-status" class="waitlist-status" role="status" aria-live="polite" tabindex="-1"></p>
+        <noscript>Please enable JavaScript to join the waitlist.</noscript>
+      </form>
+      </div>
+      <img class="beta-doggophone page-reveal" src="assets/DoggoPhone.png" alt="Doggo with a phone">
+    </section>
+  </main>
+  <script src="subpage.js"></script>
+  <script src="waitlist.js"></script>
+</body>
+</html>
